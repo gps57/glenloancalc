@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loan Calculator</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="lc-script.js" defer></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body id="docBody" class = "site-content">
+    <header id="page-layout" class="site-header">
+        <div class="text-center mb-5">
+            <img src="./images/personal-loans_t.png" class="">    
+        </div>
+    </header>
+
+    <div id="pageContainer" class="container">
+        <div class="row mb-5  align-items-center">
+            <div class="col-sm">
+                <!-- <form action="/answer" method="POST"> -->
+                <form name = "loanForm" id="loanFormId" action="#">
+                    <div class="form-group">
+                        <label for="loanAmount" class="text-muted mb-1"><small>Loan Amount</small></label>
+                            <input name="loanAmount"
+                                id="loanAmountId"
+                                class="form-control"
+                                type="text"
+                                placeholder="Enter loan amount"
+                                autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loanTerm" class="text-muted mb-1"><small>Term (months)</small></label>
+                            <input name="loanTerm"
+                                id="loanTermId"
+                                class="form-control"
+                                type="text"
+                                placeholder="Enter term in months"
+                                autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loanRate" class="text-muted mb-1"><small>Rate (%)</small></label>
+                            <input name="loanRate"
+                                id="loanRateId"
+                                class="form-control" type="text" placeholder="Enter rate as a percentage" autocomplete="off">
+                    </div>
+
+                    <button id="calcButton" class="py-3 mt-4 btn btn-lg btn-success btn-block">Calculate Payments</button>
+                </form>
+            </div>
+            <div id="chartArea" class="col-sm">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
